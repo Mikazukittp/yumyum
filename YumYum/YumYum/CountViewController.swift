@@ -24,23 +24,24 @@ class CountViewController: UIViewController {
             return
         }
 
+        countLabel.textColor = UIColor.yellowColor()
         if (!countTimer.valid) {
             onReadyGo = true
             startBtn.setTitle("-", forState: UIControlState.Normal)
             let selector : Selector = "ready"
+            countLabel.font = UIFont(name: "Let's go Digital", size: 75)
             countLabel.text = "Ready..."
-            countLabel.textColor = UIColor.blackColor()
             readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: selector, userInfo: nil, repeats: false)
         }else{
             countTimer.invalidate()
             startBtn.setTitle("START", forState: UIControlState.Normal)
-            countLabel.alpha = 1
         }
     }
     
     
     func ready() {
         let selector : Selector = "go"
+        countLabel.font = UIFont(name: "Let's go Digital", size: 100)
         countLabel.text = "GO!!!"
         goTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: selector, userInfo: nil, repeats: false)
         readyTimer.invalidate()
@@ -48,6 +49,7 @@ class CountViewController: UIViewController {
     
     func go() {
         let selector : Selector = "startCounter"
+        countLabel.font = UIFont(name: "DSEG7 Classic", size: 80)
         countTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: selector, userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
         goTimer.invalidate()
@@ -72,15 +74,15 @@ class CountViewController: UIViewController {
         
         let fraction = UInt32(time * 100)
         
-        let timeSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+        let timeSeconds = seconds > 9 ? String(seconds):" " + String(seconds)
         let timeFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
         
-        countLabel.text = "\(timeSeconds):\(timeFraction)"
+        countLabel.text = "\(timeSeconds).\(timeFraction)"
         if(isOver){
-            countLabel.text = "-" + countLabel.text!
+            countLabel.text = "-" + countLabel.text! + " "
             countLabel.textColor = UIColor.redColor()
         }else if(seconds<7){
-            countLabel.alpha = 0
+            countLabel.textColor = UIColor.blackColor()
         }
         
     }
