@@ -17,14 +17,20 @@ class CountViewController: UIViewController {
     var countTimer:NSTimer = NSTimer()
     var readyTimer:NSTimer = NSTimer()
     var goTimer:NSTimer = NSTimer()
+    var onReadyGo:Bool = false
     
     @IBAction func start(sender: AnyObject) {
+        if(onReadyGo){
+            return
+        }
+
         if (!countTimer.valid) {
-            startBtn.setTitle("STOP", forState: UIControlState.Normal)
-            let mySelector : Selector = "ready"
+            onReadyGo = true
+            startBtn.setTitle("-", forState: UIControlState.Normal)
+            let selector : Selector = "ready"
             countLabel.text = "Ready..."
             countLabel.textColor = UIColor.blackColor()
-            readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: mySelector, userInfo: nil, repeats: false)
+            readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: selector, userInfo: nil, repeats: false)
         }else{
             countTimer.invalidate()
             startBtn.setTitle("START", forState: UIControlState.Normal)
@@ -34,35 +40,37 @@ class CountViewController: UIViewController {
     
     
     func ready() {
-        let mySelector : Selector = "go"
+        let selector : Selector = "go"
         countLabel.text = "GO!!!"
-        goTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: mySelector, userInfo: nil, repeats: false)
+        goTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: selector, userInfo: nil, repeats: false)
         readyTimer.invalidate()
     }
     
     func go() {
-        let mySelector : Selector = "myStartTime"
-        countTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: mySelector, userInfo: nil, repeats: true)
+        let selector : Selector = "startCounter"
+        countTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: selector, userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
         goTimer.invalidate()
     }
     
-    func myStartTime() {
+    func startCounter() {
+        onReadyGo = false
+        startBtn.setTitle("STOP", forState: UIControlState.Normal)
         var isOver = false
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
-        var myTime: NSTimeInterval = currentTime - startTime
+        var time: NSTimeInterval = currentTime - startTime
         
-        if(myTime < 10){
-            myTime = 10 - myTime
+        if(time < 10){
+            time = 10 - time
         }else{
-            myTime -= 10
+            time -= 10
             isOver = true
         }
         
-        let seconds = UInt32(myTime)
-        myTime -= NSTimeInterval(seconds)
+        let seconds = UInt32(time)
+        time -= NSTimeInterval(seconds)
         
-        let fraction = UInt32(myTime * 100)
+        let fraction = UInt32(time * 100)
         
         let timeSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
         let timeFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
