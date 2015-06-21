@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0053EEE91B36C990008E038C /* Let's go Digital Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0053EEE81B36C990008E038C /* Let's go Digital Regular.ttf */; };
+		00AC6C4E1B356C0400FC42EB /* Let's go Digital Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00AC6C4D1B356C0400FC42EB /* Let's go Digital Regular.ttf */; };
 		8307029A1B34417E0018706A /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830702981B34417E0018706A /* TopViewController.swift */; };
 		8307029B1B34417E0018706A /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830702991B34417E0018706A /* TopViewController.xib */; };
 		8307029E1B3443210018706A /* SlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8307029C1B3443210018706A /* SlotViewController.swift */; };
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0053EEE81B36C990008E038C /* Let's go Digital Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Let's go Digital Regular.ttf"; sourceTree = "<group>"; };
 		543D5C9B7687B998F84C6486 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		830702981B34417E0018706A /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		830702991B34417E0018706A /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		83D44B651B33EF490034AB09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0053EEE81B36C990008E038C /* Let's go Digital Regular.ttf */,
 				83D44B661B33EF490034AB09 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				830702981B34417E0018706A /* TopViewController.swift */,
+				00AC6C4D1B356C0400FC42EB /* Let's go Digital Regular.ttf */,
 				830702991B34417E0018706A /* TopViewController.xib */,
 				8307029C1B3443210018706A /* SlotViewController.swift */,
 				8307029D1B3443210018706A /* SlotViewController.xib */,
@@ -272,7 +277,9 @@
 				830702A71B3443550018706A /* BombViewController.xib in Resources */,
 				8307029F1B3443210018706A /* SlotViewController.xib in Resources */,
 				8307029B1B34417E0018706A /* TopViewController.xib in Resources */,
+				0053EEE91B36C990008E038C /* Let's go Digital Regular.ttf in Resources */,
 				83D44B6F1B33EF490034AB09 /* Images.xcassets in Resources */,
+				00AC6C4E1B356C0400FC42EB /* Let's go Digital Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
