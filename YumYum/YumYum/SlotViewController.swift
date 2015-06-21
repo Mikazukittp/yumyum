@@ -92,6 +92,8 @@ class SlotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startButton.backgroundColor = UIColor(red: 0.49, green: 0.36, blue: 0.75, alpha: 1.0)
+        
         number1.layer.masksToBounds = true
         number1.layer.cornerRadius = 5.0
         
@@ -102,11 +104,6 @@ class SlotViewController: UIViewController {
         number3.layer.cornerRadius = 5.0
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
