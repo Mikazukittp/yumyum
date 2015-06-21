@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0053EEE51B36A54F008E038C /* Let's go Digital Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0053EEE41B36A54F008E038C /* Let's go Digital Regular.ttf */; };
 		00AC6C4E1B356C0400FC42EB /* Let's go Digital Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00AC6C4D1B356C0400FC42EB /* Let's go Digital Regular.ttf */; };
 		8307029A1B34417E0018706A /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830702981B34417E0018706A /* TopViewController.swift */; };
 		8307029B1B34417E0018706A /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830702991B34417E0018706A /* TopViewController.xib */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0053EEE41B36A54F008E038C /* Let's go Digital Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Let's go Digital Regular.ttf"; sourceTree = "<group>"; };
 		00AC6C4D1B356C0400FC42EB /* Let's go Digital Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Let's go Digital Regular.ttf"; path = "../../../../Downloads/Let's go Digital Regular.ttf"; sourceTree = "<group>"; };
 		830702981B34417E0018706A /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		830702991B34417E0018706A /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				830702981B34417E0018706A /* TopViewController.swift */,
+				0053EEE41B36A54F008E038C /* Let's go Digital Regular.ttf */,
 				00AC6C4D1B356C0400FC42EB /* Let's go Digital Regular.ttf */,
 				830702991B34417E0018706A /* TopViewController.xib */,
 				8307029C1B3443210018706A /* SlotViewController.swift */,
@@ -245,6 +248,7 @@
 				830702A31B3443440018706A /* CountViewController.xib in Resources */,
 				830702A71B3443550018706A /* BombViewController.xib in Resources */,
 				8307029F1B3443210018706A /* SlotViewController.xib in Resources */,
+				0053EEE51B36A54F008E038C /* Let's go Digital Regular.ttf in Resources */,
 				8307029B1B34417E0018706A /* TopViewController.xib in Resources */,
 				83D44B6F1B33EF490034AB09 /* Images.xcassets in Resources */,
 				00AC6C4E1B356C0400FC42EB /* Let's go Digital Regular.ttf in Resources */,
