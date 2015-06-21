@@ -18,14 +18,6 @@ class CountViewController: UIViewController {
     var readyTimer:NSTimer = NSTimer()
     var goTimer:NSTimer = NSTimer()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     @IBAction func start(sender: AnyObject) {
         if (!countTimer.valid) {
             startBtn.setTitle("STOP", forState: UIControlState.Normal)
@@ -67,10 +59,10 @@ class CountViewController: UIViewController {
             isOver = true
         }
         
-        let seconds = UInt8(myTime)
+        let seconds = UInt32(myTime)
         myTime -= NSTimeInterval(seconds)
         
-        let fraction = UInt8(myTime * 100)
+        let fraction = UInt32(myTime * 100)
         
         let timeSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
         let timeFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
