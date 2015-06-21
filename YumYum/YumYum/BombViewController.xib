@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BombViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BombViewController" customModule="YumYum" customModuleProvider="target">
             <connections>
+                <outlet property="gameView" destination="rs2-cx-x6g" id="USK-hr-hZf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +14,102 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-7x-AV4" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="10" y="380" width="80" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="DlS-7Z-dKL"/>
+                        <constraint firstAttribute="width" constant="80" id="bGu-i1-DqH"/>
+                    </constraints>
+                    <state key="normal" title="1">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="button1Tapped:" destination="-1" eventType="touchUpInside" id="LZ6-k5-A5A"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uA-Ca-1Oq" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="260" y="380" width="80" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ocw-Bp-TTV"/>
+                        <constraint firstAttribute="width" constant="80" id="xGX-3O-gTn"/>
+                    </constraints>
+                    <state key="normal" title="2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="button2Tapped:" destination="-1" eventType="touchUpInside" id="nyH-mh-yH7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-lT-A7B" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="510" y="380" width="80" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aLL-EZ-9iZ"/>
+                        <constraint firstAttribute="width" constant="80" id="lYg-k1-vDY"/>
+                    </constraints>
+                    <state key="normal" title="3">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="button3Tapped:" destination="-1" eventType="touchUpInside" id="RbH-w7-Vdc"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7F-xZ-1pQ">
+                    <rect key="frame" x="0.0" y="310" width="600" height="70"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-qd-KBb">
+                    <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TF-Ie-iTV" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="200" y="480" width="200" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="LnA-Mg-kII"/>
+                        <constraint firstAttribute="width" constant="200" id="Szz-Xa-jbj"/>
+                    </constraints>
+                    <state key="normal" title="Start">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rs2-cx-x6g">
+                    <rect key="frame" x="10" y="30" width="580" height="280"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="F1F-dN-iuP"/>
+                        <constraint firstAttribute="height" constant="280" id="Mkc-DF-6uL"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="F1F-dN-iuP"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.3921568627" green="0.21960784310000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="n7F-xZ-1pQ" secondAttribute="trailing" id="6YE-QK-ImW"/>
+                <constraint firstItem="bp2-qd-KBb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7gn-qZ-lyb"/>
+                <constraint firstItem="n7F-xZ-1pQ" firstAttribute="height" secondItem="bp2-qd-KBb" secondAttribute="height" id="8ZX-xi-tkC"/>
+                <constraint firstAttribute="trailing" secondItem="rs2-cx-x6g" secondAttribute="trailing" constant="10" id="9iM-Ne-xCw"/>
+                <constraint firstItem="tHF-7x-AV4" firstAttribute="top" secondItem="n7F-xZ-1pQ" secondAttribute="bottom" id="K2F-zm-KUx"/>
+                <constraint firstAttribute="trailing" secondItem="bp2-qd-KBb" secondAttribute="trailing" id="NRX-NU-f9b"/>
+                <constraint firstItem="n7F-xZ-1pQ" firstAttribute="top" secondItem="rs2-cx-x6g" secondAttribute="bottom" id="Org-2y-wKf"/>
+                <constraint firstAttribute="trailing" secondItem="0XE-lT-A7B" secondAttribute="trailing" constant="10" id="PQo-Mz-f4K"/>
+                <constraint firstItem="0XE-lT-A7B" firstAttribute="top" secondItem="n7F-xZ-1pQ" secondAttribute="bottom" id="Rge-fD-qp5"/>
+                <constraint firstItem="n7F-xZ-1pQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UtM-kz-uH8"/>
+                <constraint firstItem="rs2-cx-x6g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="VKG-wr-LRX"/>
+                <constraint firstAttribute="centerX" secondItem="8TF-Ie-iTV" secondAttribute="centerX" id="d3R-R1-cSC"/>
+                <constraint firstAttribute="bottom" secondItem="bp2-qd-KBb" secondAttribute="bottom" id="fBg-f6-kIK"/>
+                <constraint firstItem="rs2-cx-x6g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="hcp-cC-mgd"/>
+                <constraint firstItem="8TF-Ie-iTV" firstAttribute="top" secondItem="8uA-Ca-1Oq" secondAttribute="bottom" constant="50" id="hgz-SP-P28"/>
+                <constraint firstAttribute="centerX" secondItem="8uA-Ca-1Oq" secondAttribute="centerX" id="iue-8c-a72"/>
+                <constraint firstItem="tHF-7x-AV4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="luf-SA-TNK"/>
+                <constraint firstItem="8uA-Ca-1Oq" firstAttribute="top" secondItem="n7F-xZ-1pQ" secondAttribute="bottom" id="mq3-u5-6cY"/>
+                <constraint firstItem="bp2-qd-KBb" firstAttribute="top" secondItem="8TF-Ie-iTV" secondAttribute="bottom" id="ptq-YF-Wwf"/>
+            </constraints>
         </view>
     </objects>
 </document>
