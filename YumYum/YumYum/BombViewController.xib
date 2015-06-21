@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BombViewController" customModule="YumYum" customModuleProvider="target">
             <connections>
+                <outlet property="gameView" destination="rs2-cx-x6g" id="USK-hr-hZf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,19 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rs2-cx-x6g">
-                    <rect key="frame" x="10" y="30" width="580" height="280"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="300" id="F1F-dN-iuP"/>
-                        <constraint firstAttribute="height" constant="280" id="Mkc-DF-6uL"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="F1F-dN-iuP"/>
-                        </mask>
-                    </variation>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-7x-AV4" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
                     <rect key="frame" x="10" y="380" width="80" height="50"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,6 +25,9 @@
                     <state key="normal" title="1">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="button1Tapped:" destination="-1" eventType="touchUpInside" id="LZ6-k5-A5A"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uA-Ca-1Oq" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
                     <rect key="frame" x="260" y="380" width="80" height="50"/>
@@ -48,6 +39,9 @@
                     <state key="normal" title="2">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="button2Tapped:" destination="-1" eventType="touchUpInside" id="nyH-mh-yH7"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-lT-A7B" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
                     <rect key="frame" x="510" y="380" width="80" height="50"/>
@@ -59,6 +53,9 @@
                     <state key="normal" title="3">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="button3Tapped:" destination="-1" eventType="touchUpInside" id="RbH-w7-Vdc"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7F-xZ-1pQ">
                     <rect key="frame" x="0.0" y="310" width="600" height="70"/>
@@ -77,6 +74,19 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rs2-cx-x6g">
+                    <rect key="frame" x="10" y="30" width="580" height="280"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="F1F-dN-iuP"/>
+                        <constraint firstAttribute="height" constant="280" id="Mkc-DF-6uL"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="F1F-dN-iuP"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.3921568627" green="0.21960784310000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
