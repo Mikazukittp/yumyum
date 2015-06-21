@@ -31,6 +31,7 @@ class CountViewController: UIViewController {
             isOver=false
             startBtn.setTitle("", forState: UIControlState.Normal)
             startBtn.enabled = false
+            startBtn.backgroundColor = UIColor(white: 0.8, alpha: 1)
             let selector : Selector = "ready"
             countLabel.font = UIFont(name: "Let's go Digital", size: 75)
             countLabel.text = "Ready..."
@@ -68,6 +69,7 @@ class CountViewController: UIViewController {
         onReadyGo = false
         startBtn.setTitle("STOP", forState: UIControlState.Normal)
         startBtn.enabled = true
+        startBtn.backgroundColor = UIColor.whiteColor()
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         var time: NSTimeInterval = currentTime - startTime
         
