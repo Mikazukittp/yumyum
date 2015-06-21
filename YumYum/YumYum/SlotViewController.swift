@@ -24,16 +24,7 @@ class SlotViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
-    
-    
     @IBAction func start(sender: AnyObject) {
-        if timerRunning == true {
-            
-            timer.invalidate()
-            timerRunning = false
-            
-            startButton.setTitle("start", forState: UIControlState())
-        }
 
         if timerRunning == false {
             countNum = 0
@@ -48,6 +39,7 @@ class SlotViewController: UIViewController {
             timerRunning = true
             nowNum = 1
             startButton.backgroundColor = UIColor.grayColor()
+            stopButton.backgroundColor = UIColor(red: 0.49, green: 0.36, blue: 0.75, alpha: 1.0)
         }
         
     }
@@ -63,25 +55,22 @@ class SlotViewController: UIViewController {
             
             switch nowNum {
             case 1:
-                timer = NSTimer.scheduledTimerWithTimeInterval(0.08, target: self, selector: Selector("update2"), userInfo: nil,    repeats: true)
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.08, target: self, selector: Selector("update2"), userInfo: nil, repeats: true)
                 timerRunning = true
                 nowNum = 2
             case 2:
-                timer = NSTimer.scheduledTimerWithTimeInterval(0.08, target: self, selector: Selector("update3"), userInfo: nil,    repeats: true)
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.08, target: self, selector: Selector("update3"), userInfo: nil, repeats: true)
                 timerRunning = true
                 nowNum = 3
             default:
                 timer.invalidate()
                 timerRunning = false
+                stopButton.backgroundColor = UIColor.grayColor()
+                startButton.backgroundColor = UIColor(red: 0.49, green: 0.36, blue: 0.75, alpha: 1.0)
             }
 
         }
 
-    }
-
-    func updateNumber(number: UILabel!) {
-        countNum++
-        number.text = "\(countNum % 10)"
     }
     
     func update() {
@@ -103,9 +92,14 @@ class SlotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        number1.layer.masksToBounds = true
+        number1.layer.cornerRadius = 5.0
         
-        startButton.backgroundColor = UIColor.whiteColor()
-        stopButton.backgroundColor = UIColor.redColor()
+        number2.layer.masksToBounds = true
+        number2.layer.cornerRadius = 5.0
+        
+        number3.layer.masksToBounds = true
+        number3.layer.cornerRadius = 5.0
     }
 
     override func didReceiveMemoryWarning() {
