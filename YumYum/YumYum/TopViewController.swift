@@ -45,7 +45,14 @@ class TopViewController: UIViewController {
     }
     
     func setBannerView() {
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        #if DEBUG
+            let adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+            let adUnitID = "ca-app-pub-8668651775161815/1412551083"
+        #endif
+        
+        bannerView.adUnitID = adUnitID
         bannerView.rootViewController = self
         bannerView.loadRequest(GADRequest())
     }
