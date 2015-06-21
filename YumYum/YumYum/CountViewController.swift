@@ -17,10 +17,16 @@ class CountViewController: UIViewController {
     var countTimer:NSTimer = NSTimer()
     var readyTimer:NSTimer = NSTimer()
     var goTimer:NSTimer = NSTimer()
+    var onReadyGo:Bool = false
     
     @IBAction func start(sender: AnyObject) {
+        if(onReadyGo){
+            return
+        }
+
         if (!countTimer.valid) {
-            startBtn.setTitle("STOP", forState: UIControlState.Normal)
+            onReadyGo = true
+            startBtn.setTitle("-", forState: UIControlState.Normal)
             let selector : Selector = "ready"
             countLabel.text = "Ready..."
             countLabel.textColor = UIColor.blackColor()
@@ -48,6 +54,8 @@ class CountViewController: UIViewController {
     }
     
     func startCounter() {
+        onReadyGo = false
+        startBtn.setTitle("STOP", forState: UIControlState.Normal)
         var isOver = false
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         var time: NSTimeInterval = currentTime - startTime
