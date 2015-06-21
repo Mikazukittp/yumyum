@@ -16,19 +16,42 @@ class SlotViewController: UIViewController {
     var countNum3 = 0
     var timerRunning = false
     var timer = NSTimer()
+    var nowNum = 0
     
-    @IBAction func start(sender: AnyObject) {
-        if timerRunning == false {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
-            timerRunning = true
-        }
-    }
-
     @IBOutlet weak var number1: UILabel!
-    
     @IBOutlet weak var number2: UILabel!
     @IBOutlet weak var number3: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
+    
+    
+    @IBAction func start(sender: AnyObject) {
+        if timerRunning == true {
+            
+            timer.invalidate()
+            timerRunning = false
+            
+            startButton.setTitle("start", forState: UIControlState())
+        }
+
+        if timerRunning == false {
+            countNum = 0
+            countNum2 = 0
+            countNum3 = 0
+            number1.text = "0"
+            number2.text = "0"
+            number3.text = "0"
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self,
+                selector: Selector("update"), userInfo: nil, repeats: true)
+            timerRunning = true
+            nowNum = 1
+            startButton.backgroundColor = UIColor.grayColor()
+        }
+        
+    }
+
     @IBAction func stopButton1(sender: AnyObject) {
         if timerRunning == true {
             timer.invalidate()
@@ -36,30 +59,29 @@ class SlotViewController: UIViewController {
         }
         
         if timerRunning == false {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("update2"), userInfo: nil, repeats: true)
-            timerRunning = true
+            countNum = 0
+            
+            switch nowNum {
+            case 1:
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.08, target: self, selector: Selector("update2"), userInfo: nil,    repeats: true)
+                timerRunning = true
+                nowNum = 2
+            case 2:
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.08, target: self, selector: Selector("update3"), userInfo: nil,    repeats: true)
+                timerRunning = true
+                nowNum = 3
+            default:
+                timer.invalidate()
+                timerRunning = false
+            }
+
         }
 
     }
 
-    @IBAction func stopButton2(sender: AnyObject) {
-        if timerRunning == true {
-            timer.invalidate()
-            timerRunning = false
-        }
-        
-        if timerRunning == false {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("update3"), userInfo: nil, repeats: true)
-            timerRunning = true
-        }
-
-    }
-    
-    @IBAction func stopButton3(sender: AnyObject) {
-        if timerRunning == true {
-            timer.invalidate()
-            timerRunning = false
-        }
+    func updateNumber(number: UILabel!) {
+        countNum++
+        number.text = "\(countNum % 10)"
     }
     
     func update() {
@@ -68,21 +90,22 @@ class SlotViewController: UIViewController {
     }
     
     func update2() {
-        countNum2++
-        number2.text = "\(countNum2 % 10)"
+        countNum++
+        number2.text = "\(countNum % 10)"
     }
     
     func update3() {
-        countNum3++
-        number3.text = "\(countNum3 % 10)"
+        countNum++
+        number3.text = "\(countNum % 10)"
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        startButton.backgroundColor = UIColor.whiteColor()
+        stopButton.backgroundColor = UIColor.redColor()
     }
 
     override func didReceiveMemoryWarning() {
