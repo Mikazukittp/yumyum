@@ -10,26 +10,78 @@ import UIKit
 
 class CountViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var startBtn: UIButton!
+    
+    var startTime = NSTimeInterval()
+    var countTimer:NSTimer = NSTimer()
+    var readyTimer:NSTimer = NSTimer()
+    var goTimer:NSTimer = NSTimer()
+    var onReadyGo:Bool = false
+    
+    @IBAction func start(sender: AnyObject) {
+        if(onReadyGo){
+            return
+        }
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if (!countTimer.valid) {
+            onReadyGo = true
+            startBtn.setTitle("-", forState: UIControlState.Normal)
+            let selector : Selector = "ready"
+            countLabel.text = "Ready..."
+            countLabel.textColor = UIColor.blackColor()
+            readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: selector, userInfo: nil, repeats: false)
+        }else{
+            countTimer.invalidate()
+            startBtn.setTitle("START", forState: UIControlState.Normal)
+            countLabel.alpha = 1
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func ready() {
+        let selector : Selector = "go"
+        countLabel.text = "GO!!!"
+        goTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: selector, userInfo: nil, repeats: false)
+        readyTimer.invalidate()
     }
-    */
-
+    
+    func go() {
+        let selector : Selector = "startCounter"
+        countTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: selector, userInfo: nil, repeats: true)
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        goTimer.invalidate()
+    }
+    
+    func startCounter() {
+        onReadyGo = false
+        startBtn.setTitle("STOP", forState: UIControlState.Normal)
+        var isOver = false
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        var time: NSTimeInterval = currentTime - startTime
+        
+        if(time < 10){
+            time = 10 - time
+        }else{
+            time -= 10
+            isOver = true
+        }
+        
+        let seconds = UInt32(time)
+        time -= NSTimeInterval(seconds)
+        
+        let fraction = UInt32(time * 100)
+        
+        let timeSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+        let timeFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
+        
+        countLabel.text = "\(timeSeconds):\(timeFraction)"
+        if(isOver){
+            countLabel.text = "-" + countLabel.text!
+            countLabel.textColor = UIColor.redColor()
+        }else if(seconds<7){
+            countLabel.alpha = 0
+        }
+        
+    }
 }
