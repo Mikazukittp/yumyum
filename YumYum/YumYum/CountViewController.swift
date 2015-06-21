@@ -18,22 +18,31 @@ class CountViewController: UIViewController {
     var readyTimer:NSTimer = NSTimer()
     var goTimer:NSTimer = NSTimer()
     var onReadyGo:Bool = false
+    var isOver = false
+
     
     @IBAction func start(sender: AnyObject) {
         if(onReadyGo){
             return
         }
 
-        countLabel.textColor = UIColor.yellowColor()
         if (!countTimer.valid) {
             onReadyGo = true
-            startBtn.setTitle("-", forState: UIControlState.Normal)
+            isOver=false
+            startBtn.setTitle("", forState: UIControlState.Normal)
+            startBtn.enabled = false
             let selector : Selector = "ready"
             countLabel.font = UIFont(name: "Let's go Digital", size: 75)
             countLabel.text = "Ready..."
+            countLabel.textColor = UIColor.yellowColor()
             readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: selector, userInfo: nil, repeats: false)
         }else{
             countTimer.invalidate()
+            if(isOver){
+                countLabel.textColor = UIColor.redColor()
+            }else{
+                countLabel.textColor = UIColor.yellowColor()
+            }
             startBtn.setTitle("START", forState: UIControlState.Normal)
         }
     }
@@ -58,7 +67,7 @@ class CountViewController: UIViewController {
     func startCounter() {
         onReadyGo = false
         startBtn.setTitle("STOP", forState: UIControlState.Normal)
-        var isOver = false
+        startBtn.enabled = true
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         var time: NSTimeInterval = currentTime - startTime
         
@@ -80,7 +89,6 @@ class CountViewController: UIViewController {
         countLabel.text = "\(timeSeconds).\(timeFraction)"
         if(isOver){
             countLabel.text = "-" + countLabel.text! + " "
-            countLabel.textColor = UIColor.redColor()
         }else if(seconds<7){
             countLabel.textColor = UIColor.blackColor()
         }
