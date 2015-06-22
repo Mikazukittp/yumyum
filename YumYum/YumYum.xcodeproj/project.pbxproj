@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0053EEE91B36C990008E038C /* Let's go Digital Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0053EEE81B36C990008E038C /* Let's go Digital Regular.ttf */; };
-		00AC6C4E1B356C0400FC42EB /* Let's go Digital Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00AC6C4D1B356C0400FC42EB /* Let's go Digital Regular.ttf */; };
+		00AC6C4E1B356C0400FC42EB /* (null) in Resources */ = {isa = PBXBuildFile; };
 		8307029A1B34417E0018706A /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830702981B34417E0018706A /* TopViewController.swift */; };
 		8307029B1B34417E0018706A /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830702991B34417E0018706A /* TopViewController.xib */; };
 		8307029E1B3443210018706A /* SlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8307029C1B3443210018706A /* SlotViewController.swift */; };
@@ -21,6 +21,7 @@
 		83D44B681B33EF490034AB09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D44B671B33EF490034AB09 /* AppDelegate.swift */; };
 		83D44B6F1B33EF490034AB09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D44B6E1B33EF490034AB09 /* Images.xcassets */; };
 		83D44B7E1B33EF490034AB09 /* YumYumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D44B7D1B33EF490034AB09 /* YumYumTests.swift */; };
+		9D3B744B1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3B744A1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf */; };
 		B518FDD0843759EF514AF18A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1BA68A89084A0A1480C39F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		83D44B771B33EF490034AB09 /* YumYumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumYumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D44B7C1B33EF490034AB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D44B7D1B33EF490034AB09 /* YumYumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumYumTests.swift; sourceTree = "<group>"; };
+		9D3B744A1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Bold.ttf"; sourceTree = "<group>"; };
 		AC1BA68A89084A0A1480C39F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE93E1AAFA1B6EFBAA07744E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 		83D44B651B33EF490034AB09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9D3B744A1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf */,
 				0053EEE81B36C990008E038C /* Let's go Digital Regular.ttf */,
 				83D44B661B33EF490034AB09 /* Info.plist */,
 			);
@@ -156,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				830702981B34417E0018706A /* TopViewController.swift */,
-				00AC6C4D1B356C0400FC42EB /* Let's go Digital Regular.ttf */,
 				830702991B34417E0018706A /* TopViewController.xib */,
 				8307029C1B3443210018706A /* SlotViewController.swift */,
 				8307029D1B3443210018706A /* SlotViewController.xib */,
@@ -278,8 +280,9 @@
 				8307029F1B3443210018706A /* SlotViewController.xib in Resources */,
 				8307029B1B34417E0018706A /* TopViewController.xib in Resources */,
 				0053EEE91B36C990008E038C /* Let's go Digital Regular.ttf in Resources */,
+				9D3B744B1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf in Resources */,
 				83D44B6F1B33EF490034AB09 /* Images.xcassets in Resources */,
-				00AC6C4E1B356C0400FC42EB /* Let's go Digital Regular.ttf in Resources */,
+				00AC6C4E1B356C0400FC42EB /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

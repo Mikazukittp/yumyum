@@ -18,6 +18,8 @@ class CountViewController: UIViewController {
     var readyTimer:NSTimer = NSTimer()
     var goTimer:NSTimer = NSTimer()
     var onReadyGo:Bool = false
+    var isOver = false
+
     
     @IBAction func start(sender: AnyObject) {
         if(onReadyGo){
@@ -26,21 +28,30 @@ class CountViewController: UIViewController {
 
         if (!countTimer.valid) {
             onReadyGo = true
-            startBtn.setTitle("-", forState: UIControlState.Normal)
+            isOver=false
+            startBtn.setTitle("", forState: UIControlState.Normal)
+            startBtn.enabled = false
+            startBtn.backgroundColor = UIColor(white: 0.8, alpha: 1)
             let selector : Selector = "ready"
+            countLabel.font = UIFont(name: "Let's go Digital", size: 75)
             countLabel.text = "Ready..."
-            countLabel.textColor = UIColor.blackColor()
+            countLabel.textColor = UIColor.yellowColor()
             readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: selector, userInfo: nil, repeats: false)
         }else{
             countTimer.invalidate()
+            if(isOver){
+                countLabel.textColor = UIColor.redColor()
+            }else{
+                countLabel.textColor = UIColor.yellowColor()
+            }
             startBtn.setTitle("START", forState: UIControlState.Normal)
-            countLabel.alpha = 1
         }
     }
     
     
     func ready() {
         let selector : Selector = "go"
+        countLabel.font = UIFont(name: "Let's go Digital", size: 100)
         countLabel.text = "GO!!!"
         goTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: selector, userInfo: nil, repeats: false)
         readyTimer.invalidate()
@@ -48,6 +59,7 @@ class CountViewController: UIViewController {
     
     func go() {
         let selector : Selector = "startCounter"
+        countLabel.font = UIFont(name: "DSEG7 Classic", size: 80)
         countTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: selector, userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
         goTimer.invalidate()
@@ -56,7 +68,8 @@ class CountViewController: UIViewController {
     func startCounter() {
         onReadyGo = false
         startBtn.setTitle("STOP", forState: UIControlState.Normal)
-        var isOver = false
+        startBtn.enabled = true
+        startBtn.backgroundColor = UIColor.whiteColor()
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         var time: NSTimeInterval = currentTime - startTime
         
@@ -72,15 +85,14 @@ class CountViewController: UIViewController {
         
         let fraction = UInt32(time * 100)
         
-        let timeSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+        let timeSeconds = seconds > 9 ? String(seconds):" " + String(seconds)
         let timeFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
         
-        countLabel.text = "\(timeSeconds):\(timeFraction)"
+        countLabel.text = "\(timeSeconds).\(timeFraction)"
         if(isOver){
-            countLabel.text = "-" + countLabel.text!
-            countLabel.textColor = UIColor.redColor()
+            countLabel.text = "-" + countLabel.text! + " "
         }else if(seconds<7){
-            countLabel.alpha = 0
+            countLabel.textColor = UIColor.blackColor()
         }
         
     }
