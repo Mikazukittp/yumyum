@@ -82,17 +82,24 @@ class CountViewController: UIViewController {
         
         let seconds = UInt32(time)
         time -= NSTimeInterval(seconds)
+        if(isOver && seconds > 9){
+            countLabel.text = "-9.99"
+            return
+        }
         
         let fraction = UInt32(time * 100)
         
-        let timeSeconds = seconds > 9 ? String(seconds):" " + String(seconds)
+        let timeSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
         let timeFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
         
         countLabel.text = "\(timeSeconds).\(timeFraction)"
         if(isOver){
-            countLabel.text = "-" + countLabel.text! + " "
-        }else if(seconds<7){
-            countLabel.textColor = UIColor.blackColor()
+            countLabel.text = "-" + "\(seconds).\(timeFraction)" + " "
+        }else if(seconds==6){
+            var d:Double = 0.66 * Double(100-fraction)/100
+            countLabel.textColor = UIColor(red: CGFloat(1-d), green: CGFloat(1-d), blue: CGFloat(d*0.5), alpha: 1)
+        }else if(seconds<6){
+            countLabel.textColor = UIColor(red: 0.33, green: 0.33, blue: 0.33, alpha: 1)
         }
         
     }
