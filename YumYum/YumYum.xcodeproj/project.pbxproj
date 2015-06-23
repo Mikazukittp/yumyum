@@ -22,6 +22,10 @@
 		83D44B6F1B33EF490034AB09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D44B6E1B33EF490034AB09 /* Images.xcassets */; };
 		83D44B7E1B33EF490034AB09 /* YumYumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D44B7D1B33EF490034AB09 /* YumYumTests.swift */; };
 		9D3B744B1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3B744A1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf */; };
+		9D40880D1B3807F600079B85 /* Krungthep.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40880C1B3807F600079B85 /* Krungthep.ttf */; };
+		9D4A33591B380F48004C5FC1 /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 543D5C9B7687B998F84C6486 /* Pods.debug.xcconfig */; };
+		9D4A335A1B380F4B004C5FC1 /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BE93E1AAFA1B6EFBAA07744E /* Pods.release.xcconfig */; };
+		9D4A335F1B380FE2004C5FC1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83D44B661B33EF490034AB09 /* Info.plist */; };
 		B518FDD0843759EF514AF18A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1BA68A89084A0A1480C39F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +59,7 @@
 		83D44B7C1B33EF490034AB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83D44B7D1B33EF490034AB09 /* YumYumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumYumTests.swift; sourceTree = "<group>"; };
 		9D3B744A1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Bold.ttf"; sourceTree = "<group>"; };
+		9D40880C1B3807F600079B85 /* Krungthep.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Krungthep.ttf; sourceTree = "<group>"; };
 		AC1BA68A89084A0A1480C39F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE93E1AAFA1B6EFBAA07744E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +129,7 @@
 		83D44B651B33EF490034AB09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9D40880C1B3807F600079B85 /* Krungthep.ttf */,
 				9D3B744A1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf */,
 				0053EEE81B36C990008E038C /* Let's go Digital Regular.ttf */,
 				83D44B661B33EF490034AB09 /* Info.plist */,
@@ -277,10 +283,14 @@
 			files = (
 				830702A31B3443440018706A /* CountViewController.xib in Resources */,
 				830702A71B3443550018706A /* BombViewController.xib in Resources */,
+				9D4A335A1B380F4B004C5FC1 /* Pods.release.xcconfig in Resources */,
 				8307029F1B3443210018706A /* SlotViewController.xib in Resources */,
 				8307029B1B34417E0018706A /* TopViewController.xib in Resources */,
 				0053EEE91B36C990008E038C /* Let's go Digital Regular.ttf in Resources */,
 				9D3B744B1B3719CC003E8C60 /* DSEG7Classic-Bold.ttf in Resources */,
+				9D40880D1B3807F600079B85 /* Krungthep.ttf in Resources */,
+				9D4A335F1B380FE2004C5FC1 /* Info.plist in Resources */,
+				9D4A33591B380F48004C5FC1 /* Pods.debug.xcconfig in Resources */,
 				83D44B6F1B33EF490034AB09 /* Images.xcassets in Resources */,
 				00AC6C4E1B356C0400FC42EB /* (null) in Resources */,
 			);

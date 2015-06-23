@@ -33,7 +33,7 @@ class CountViewController: UIViewController {
             startBtn.enabled = false
             startBtn.backgroundColor = UIColor(white: 0.8, alpha: 1)
             let selector : Selector = "ready"
-            countLabel.font = UIFont(name: "Let's go Digital", size: 75)
+            countLabel.font = UIFont(name: "Party LET", size: 90)
             countLabel.text = "Ready..."
             countLabel.textColor = UIColor.yellowColor()
             readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: selector, userInfo: nil, repeats: false)
@@ -51,7 +51,7 @@ class CountViewController: UIViewController {
     
     func ready() {
         let selector : Selector = "go"
-        countLabel.font = UIFont(name: "Let's go Digital", size: 100)
+        countLabel.font = UIFont(name: "Party LET", size: 110)
         countLabel.text = "GO!!!"
         goTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: selector, userInfo: nil, repeats: false)
         readyTimer.invalidate()
