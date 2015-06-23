@@ -23,6 +23,7 @@ class SlotViewController: UIViewController {
     @IBOutlet weak var number3: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var bkBlack: UIView!
     
     @IBAction func start(sender: AnyObject) {
 
@@ -39,7 +40,10 @@ class SlotViewController: UIViewController {
             timerRunning = true
             nowNum = 1
             startButton.backgroundColor = UIColor.grayColor()
-            stopButton.backgroundColor = UIColor(red: 0.49, green: 0.36, blue: 0.75, alpha: 1.0)
+            startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            stopButton.backgroundColor = UIColor.whiteColor()
+            stopButton.setTitleColor(UIColor(red: 0.37, green: 0.21, blue: 0.69, alpha: 1.0), forState: .Normal)
+
         }
         
     }
@@ -66,7 +70,9 @@ class SlotViewController: UIViewController {
                 timer.invalidate()
                 timerRunning = false
                 stopButton.backgroundColor = UIColor.grayColor()
-                startButton.backgroundColor = UIColor(red: 0.49, green: 0.36, blue: 0.75, alpha: 1.0)
+                stopButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                startButton.backgroundColor = UIColor.whiteColor()
+                startButton.setTitleColor(UIColor(red: 0.37, green: 0.21, blue: 0.69, alpha: 1.0), forState: .Normal)
             }
 
         }
@@ -92,8 +98,13 @@ class SlotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.backgroundColor = UIColor(red: 0.49, green: 0.36, blue: 0.75, alpha: 1.0)
         
+        UIColor(red: 0.49, green: 0.34, blue: 0.76, alpha: 1.0)
+        
+        self.view.sendSubviewToBack(bkBlack)
+        
+        stopButton.backgroundColor = UIColor.grayColor()
+
         number1.layer.masksToBounds = true
         number1.layer.cornerRadius = 5.0
         

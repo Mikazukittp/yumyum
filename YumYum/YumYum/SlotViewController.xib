@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlotViewController" customModule="YumYum" customModuleProvider="target">
             <connections>
+                <outlet property="bkBlack" destination="Oes-uX-eaq" id="CKT-be-uhU"/>
                 <outlet property="number1" destination="5l5-CZ-51t" id="nly-iK-ocs"/>
                 <outlet property="number2" destination="Q3e-pF-NcW" id="lyN-uk-VMu"/>
                 <outlet property="number3" destination="XrN-yi-NEC" id="SS6-tG-567"/>
@@ -26,36 +27,32 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-CZ-51t">
-                    <rect key="frame" x="356" y="200" width="100" height="130"/>
-                    <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="130" id="Gy8-by-ZPs"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="100"/>
-                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3e-pF-NcW">
-                    <rect key="frame" x="248" y="201" width="100" height="130"/>
-                    <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="130" id="gRe-N4-Gem"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="100"/>
-                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-Rg-gKI">
+                    <rect key="frame" x="250" y="375" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="スタート">
+                        <color key="titleColor" red="0.36862745098039218" green="0.20784313725490197" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="start:" destination="-1" eventType="touchUpInside" id="wkn-eX-Z7J"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWc-ct-vpD">
                     <rect key="frame" x="278" y="332" width="100" height="100"/>
-                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="BGu-RE-tEv"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Hba-lH-jIk"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="W2e-Fi-3pG"/>
                         <constraint firstAttribute="height" constant="100" id="teO-N8-3ed"/>
                     </constraints>
-                    <state key="normal" title="STOP">
+                    <state key="normal" title="ストップ">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -68,37 +65,45 @@
                         <action selector="stopButton1:" destination="-1" eventType="touchUpInside" id="sGg-5l-BO6"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-Rg-gKI">
-                    <rect key="frame" x="250" y="375" width="100" height="100"/>
-                    <color key="backgroundColor" red="0.49411764705882355" green="0.35686274509803922" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="START">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="start:" destination="-1" eventType="touchUpInside" id="wkn-eX-Z7J"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrN-yi-NEC">
                     <rect key="frame" x="140" y="201" width="100" height="130"/>
-                    <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="8G9-gn-bK7"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="100"/>
-                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="0.98431372549019602" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3e-pF-NcW">
+                    <rect key="frame" x="248" y="201" width="100" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="gRe-N4-Gem"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="100"/>
+                    <color key="textColor" red="1" green="0.98431372549999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-CZ-51t">
+                    <rect key="frame" x="356" y="200" width="100" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="Gy8-by-ZPs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="100"/>
+                    <color key="textColor" red="1" green="0.98431372549999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oes-uX-eaq">
+                    <rect key="frame" x="121" y="200" width="355" height="131"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="0.79708059210526316" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.49411764705882355" green="0.3411764705882353" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="5l5-CZ-51t" firstAttribute="width" secondItem="Q3e-pF-NcW" secondAttribute="width" id="0d7-gW-A2L"/>
+                <constraint firstAttribute="centerX" secondItem="Oes-uX-eaq" secondAttribute="centerX" id="0dJ-fA-BVI"/>
+                <constraint firstAttribute="trailing" secondItem="Oes-uX-eaq" secondAttribute="trailing" constant="10" id="1Bu-iW-gTc"/>
+                <constraint firstItem="Oes-uX-eaq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="7fv-Pe-jky"/>
                 <constraint firstAttribute="centerX" secondItem="iWc-ct-vpD" secondAttribute="centerX" id="7nT-go-ixm"/>
                 <constraint firstAttribute="trailing" secondItem="5l5-CZ-51t" secondAttribute="trailing" constant="10" id="8sE-hV-oXu"/>
                 <constraint firstAttribute="bottom" secondItem="uSu-Rg-gKI" secondAttribute="bottom" constant="50" id="BkS-PW-dTm"/>
@@ -110,6 +115,7 @@
                 <constraint firstItem="Q3e-pF-NcW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="WS2-IZ-hSK"/>
                 <constraint firstItem="Q3e-pF-NcW" firstAttribute="leading" secondItem="XrN-yi-NEC" secondAttribute="trailing" constant="10" id="XFJ-93-osa"/>
                 <constraint firstItem="5l5-CZ-51t" firstAttribute="leading" secondItem="Q3e-pF-NcW" secondAttribute="trailing" constant="10" id="Z9C-QP-cl2"/>
+                <constraint firstItem="Oes-uX-eaq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="b1u-Ox-Fgs"/>
                 <constraint firstItem="5l5-CZ-51t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="duz-D6-Tj8"/>
                 <constraint firstItem="Q3e-pF-NcW" firstAttribute="leading" secondItem="XrN-yi-NEC" secondAttribute="trailing" constant="10" id="lxs-Vt-mGF"/>
                 <constraint firstAttribute="trailing" secondItem="uSu-Rg-gKI" secondAttribute="trailing" constant="20" id="t0l-lT-f6c"/>
