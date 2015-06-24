@@ -111,6 +111,7 @@ class CountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "ZERO STOP"
         // ボタンに影をつけたい
         startBtn.layer.shadowOpacity = 1
         startBtn.layer.shadowOffset = CGSizeMake(2.0, 2.0)
