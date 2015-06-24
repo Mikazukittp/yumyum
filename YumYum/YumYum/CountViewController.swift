@@ -73,7 +73,7 @@ class CountViewController: UIViewController {
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         var time: NSTimeInterval = currentTime - startTime
         
-        if(time < 10){
+        if(time < 10.01){ // time<=10としたいところだがtimeは0.00秒以下も保持しているため time < 10.01とした
             time = 10 - time
         }else{
             time -= 10
