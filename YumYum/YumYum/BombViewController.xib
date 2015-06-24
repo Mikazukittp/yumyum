@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-7x-AV4" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="10" y="373" width="80" height="50"/>
+                    <rect key="frame" x="10" y="368" width="80" height="50"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="DlS-7Z-dKL"/>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uA-Ca-1Oq" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="260" y="373" width="80" height="50"/>
+                    <rect key="frame" x="260" y="368" width="80" height="50"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Ocw-Bp-TTV"/>
@@ -52,7 +52,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-lT-A7B" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="510" y="373" width="80" height="50"/>
+                    <rect key="frame" x="510" y="368" width="80" height="50"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="aLL-EZ-9iZ"/>
@@ -68,26 +68,13 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7F-xZ-1pQ">
-                    <rect key="frame" x="0.0" y="295" width="600" height="78"/>
+                    <rect key="frame" x="0.0" y="265" width="600" height="103"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-qd-KBb">
-                    <rect key="frame" x="0.0" y="523" width="600" height="77"/>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rs2-cx-x6g">
-                    <rect key="frame" x="10" y="15" width="580" height="280"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="300" id="F1F-dN-iuP"/>
-                        <constraint firstAttribute="height" constant="280" id="Mkc-DF-6uL"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="F1F-dN-iuP"/>
-                        </mask>
-                    </variation>
+                    <rect key="frame" x="0.0" y="498" width="600" height="102"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TF-Ie-iTV" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="200" y="473" width="200" height="50"/>
+                    <rect key="frame" x="200" y="448" width="200" height="50"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="LnA-Mg-kII"/>
@@ -102,24 +89,37 @@
                         <action selector="retryButtonTapped:" destination="-1" eventType="touchUpInside" id="Idy-ta-ieR"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rs2-cx-x6g">
+                    <rect key="frame" x="20" y="15" width="560" height="250"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="F1F-dN-iuP"/>
+                        <constraint firstAttribute="height" constant="250" id="Mkc-DF-6uL"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="F1F-dN-iuP"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.3921568627" green="0.21960784310000001" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="n7F-xZ-1pQ" secondAttribute="trailing" id="6YE-QK-ImW"/>
                 <constraint firstItem="bp2-qd-KBb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7gn-qZ-lyb"/>
                 <constraint firstItem="n7F-xZ-1pQ" firstAttribute="height" secondItem="bp2-qd-KBb" secondAttribute="height" id="8ZX-xi-tkC"/>
-                <constraint firstAttribute="trailing" secondItem="rs2-cx-x6g" secondAttribute="trailing" constant="10" id="9iM-Ne-xCw"/>
+                <constraint firstAttribute="trailing" secondItem="rs2-cx-x6g" secondAttribute="trailing" constant="20" id="9iM-Ne-xCw"/>
                 <constraint firstItem="tHF-7x-AV4" firstAttribute="top" secondItem="n7F-xZ-1pQ" secondAttribute="bottom" id="K2F-zm-KUx"/>
                 <constraint firstAttribute="trailing" secondItem="bp2-qd-KBb" secondAttribute="trailing" id="NRX-NU-f9b"/>
                 <constraint firstItem="n7F-xZ-1pQ" firstAttribute="top" secondItem="rs2-cx-x6g" secondAttribute="bottom" id="Org-2y-wKf"/>
                 <constraint firstAttribute="trailing" secondItem="0XE-lT-A7B" secondAttribute="trailing" constant="10" id="PQo-Mz-f4K"/>
                 <constraint firstItem="0XE-lT-A7B" firstAttribute="top" secondItem="n7F-xZ-1pQ" secondAttribute="bottom" id="Rge-fD-qp5"/>
                 <constraint firstItem="n7F-xZ-1pQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UtM-kz-uH8"/>
-                <constraint firstItem="rs2-cx-x6g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="VKG-wr-LRX"/>
+                <constraint firstItem="rs2-cx-x6g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="VKG-wr-LRX"/>
                 <constraint firstAttribute="centerX" secondItem="8TF-Ie-iTV" secondAttribute="centerX" id="d3R-R1-cSC"/>
                 <constraint firstAttribute="bottom" secondItem="bp2-qd-KBb" secondAttribute="bottom" id="fBg-f6-kIK"/>
                 <constraint firstItem="rs2-cx-x6g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="hcp-cC-mgd"/>
-                <constraint firstItem="8TF-Ie-iTV" firstAttribute="top" secondItem="8uA-Ca-1Oq" secondAttribute="bottom" constant="50" id="hgz-SP-P28"/>
+                <constraint firstItem="8TF-Ie-iTV" firstAttribute="top" secondItem="8uA-Ca-1Oq" secondAttribute="bottom" constant="30" id="hgz-SP-P28"/>
                 <constraint firstAttribute="centerX" secondItem="8uA-Ca-1Oq" secondAttribute="centerX" id="iue-8c-a72"/>
                 <constraint firstItem="tHF-7x-AV4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="luf-SA-TNK"/>
                 <constraint firstItem="8uA-Ca-1Oq" firstAttribute="top" secondItem="n7F-xZ-1pQ" secondAttribute="bottom" id="mq3-u5-6cY"/>

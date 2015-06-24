@@ -28,7 +28,7 @@ class BombViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "風船ゲーム"
+        self.title = "LUCKY BALLOON"
       
         //Naviagationbar潜り込み防止
         self.edgesForExtendedLayout = UIRectEdge.None
@@ -73,14 +73,19 @@ class BombViewController: UIViewController {
         self.setLimitNumber()
         
         lifePoint = 0
-        changeBombImage()
+        
+        //再生性
+        bomb.removeFromSuperview()
+        bomb = self.setBombImage()
+        gameView.addSubview(bomb)
+        self.layoutBombImage()
+        
         bomb.hidden  = false
         gameOverView.hidden  = true
 
         self.allowButton(button1, value: "1")
         self.allowButton(button2, value: "2")
         self.allowButton(button3, value: "3")
-
 
         retryButton.hidden = true
     }
