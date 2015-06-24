@@ -19,6 +19,9 @@ class CountViewController: UIViewController {
     var goTimer:NSTimer = NSTimer()
     var onReadyGo:Bool = false
     var isOver = false
+    
+    let PARTY_FONT:String = "Party LET"
+    let DIGITAL_FONT:String = "DSEG7 Classic"
 
     
     @IBAction func start(sender: AnyObject) {
@@ -33,7 +36,7 @@ class CountViewController: UIViewController {
             startBtn.enabled = false
             startBtn.backgroundColor = UIColor(white: 0.8, alpha: 1)
             let selector : Selector = "ready"
-            countLabel.font = UIFont(name: "Party LET", size: 90)
+            countLabel.font = UIFont(name: PARTY_FONT, size: 90)
             countLabel.text = "Ready..."
             countLabel.textColor = UIColor.yellowColor()
             readyTimer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: selector, userInfo: nil, repeats: false)
@@ -51,7 +54,7 @@ class CountViewController: UIViewController {
     
     func ready() {
         let selector : Selector = "go"
-        countLabel.font = UIFont(name: "Party LET", size: 110)
+        countLabel.font = UIFont(name: PARTY_FONT, size: 110)
         countLabel.text = "GO!!!"
         goTimer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: selector, userInfo: nil, repeats: false)
         readyTimer.invalidate()
@@ -59,7 +62,7 @@ class CountViewController: UIViewController {
     
     func go() {
         let selector : Selector = "startCounter"
-        countLabel.font = UIFont(name: "DSEG7 Classic", size: 80)
+        countLabel.font = UIFont(name: DIGITAL_FONT, size: 80)
         countTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: selector, userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
         goTimer.invalidate()
@@ -96,6 +99,8 @@ class CountViewController: UIViewController {
         if(isOver){
             countLabel.text = "-" + "\(seconds).\(timeFraction)" + " "
         }else if(seconds==6){
+            // フェードのために色を計算
+            // RGB(1,1,0) -- 1s --> (0.33,0.33,0.33)
             var d:Double = 0.66 * Double(100-fraction)/100
             countLabel.textColor = UIColor(red: CGFloat(1-d), green: CGFloat(1-d), blue: CGFloat(d*0.5), alpha: 1)
         }else if(seconds<6){
