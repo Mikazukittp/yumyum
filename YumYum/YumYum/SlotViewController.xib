@@ -43,28 +43,6 @@
                         <action selector="start:" destination="-1" eventType="touchUpInside" id="wkn-eX-Z7J"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWc-ct-vpD">
-                    <rect key="frame" x="278" y="332" width="100" height="100"/>
-                    <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="BGu-RE-tEv"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Hba-lH-jIk"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="W2e-Fi-3pG"/>
-                        <constraint firstAttribute="height" constant="100" id="teO-N8-3ed"/>
-                    </constraints>
-                    <state key="normal" title="ストップ">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="50"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="stopButton1:" destination="-1" eventType="touchUpInside" id="sGg-5l-BO6"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrN-yi-NEC">
                     <rect key="frame" x="140" y="201" width="100" height="130"/>
                     <constraints>
@@ -93,9 +71,31 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oes-uX-eaq">
-                    <rect key="frame" x="121" y="200" width="355" height="131"/>
+                    <rect key="frame" x="71" y="-12" width="355" height="131"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWc-ct-vpD">
+                    <rect key="frame" x="398" y="267" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="BGu-RE-tEv"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Hba-lH-jIk"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="W2e-Fi-3pG"/>
+                        <constraint firstAttribute="height" constant="100" id="teO-N8-3ed"/>
+                    </constraints>
+                    <state key="normal" title="ストップ">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="stopButton1:" destination="-1" eventType="touchUpInside" id="sGg-5l-BO6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.49411764705882355" green="0.3411764705882353" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,12 +111,13 @@
                 <constraint firstItem="uSu-Rg-gKI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Fu8-Ua-O2e"/>
                 <constraint firstItem="5l5-CZ-51t" firstAttribute="width" secondItem="XrN-yi-NEC" secondAttribute="width" id="G5g-88-Oni"/>
                 <constraint firstItem="5l5-CZ-51t" firstAttribute="height" secondItem="Q3e-pF-NcW" secondAttribute="height" id="K2R-w5-dM3"/>
-                <constraint firstItem="XrN-yi-NEC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="MAE-cB-Jl7"/>
-                <constraint firstItem="Q3e-pF-NcW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="WS2-IZ-hSK"/>
+                <constraint firstItem="XrN-yi-NEC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="MAE-cB-Jl7"/>
+                <constraint firstAttribute="bottom" secondItem="iWc-ct-vpD" secondAttribute="bottom" constant="110" id="UvL-fH-UrV"/>
+                <constraint firstItem="Q3e-pF-NcW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="WS2-IZ-hSK"/>
                 <constraint firstItem="Q3e-pF-NcW" firstAttribute="leading" secondItem="XrN-yi-NEC" secondAttribute="trailing" constant="10" id="XFJ-93-osa"/>
                 <constraint firstItem="5l5-CZ-51t" firstAttribute="leading" secondItem="Q3e-pF-NcW" secondAttribute="trailing" constant="10" id="Z9C-QP-cl2"/>
-                <constraint firstItem="Oes-uX-eaq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="b1u-Ox-Fgs"/>
-                <constraint firstItem="5l5-CZ-51t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="duz-D6-Tj8"/>
+                <constraint firstItem="Oes-uX-eaq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="b1u-Ox-Fgs"/>
+                <constraint firstItem="5l5-CZ-51t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="duz-D6-Tj8"/>
                 <constraint firstItem="Q3e-pF-NcW" firstAttribute="leading" secondItem="XrN-yi-NEC" secondAttribute="trailing" constant="10" id="lxs-Vt-mGF"/>
                 <constraint firstAttribute="trailing" secondItem="uSu-Rg-gKI" secondAttribute="trailing" constant="20" id="t0l-lT-f6c"/>
                 <constraint firstItem="5l5-CZ-51t" firstAttribute="height" secondItem="XrN-yi-NEC" secondAttribute="height" id="tkG-6Q-ZN4"/>

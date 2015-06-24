@@ -99,6 +99,17 @@ class SlotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "FORTUNE DIGITS"
+        
+        startButton.layer.shadowOpacity = 1
+        startButton.layer.shadowOffset = CGSizeMake(2.0, 2.0)
+        startButton.layer.shadowRadius = 1.0
+        startButton.layer.shadowColor = UIColor.blackColor().CGColor
+        stopButton.layer.shadowOpacity = 1
+        stopButton.layer.shadowOffset = CGSizeMake(2.0, 2.0)
+        stopButton.layer.shadowRadius = 1.0
+        stopButton.layer.shadowColor = UIColor.blackColor().CGColor
+
         UIColor(red: 0.49, green: 0.34, blue: 0.76, alpha: 1.0)
         
         self.view.sendSubviewToBack(bkBlack)
