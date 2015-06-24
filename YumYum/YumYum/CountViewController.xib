@@ -91,7 +91,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="start:" destination="-1" eventType="touchUpInside" id="gie-Wc-4t9"/>

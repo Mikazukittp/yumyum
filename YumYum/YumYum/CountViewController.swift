@@ -113,7 +113,8 @@ class CountViewController: UIViewController {
         super.viewDidLoad()
         // ボタンに影をつけたい
         startBtn.layer.shadowOpacity = 1
-        startBtn.layer.shadowOffset = CGSizeMake(5.0, 5.0)
-//        startBtn.layer.shadowColor
+        startBtn.layer.shadowOffset = CGSizeMake(2.0, 2.0)
+        startBtn.layer.shadowRadius = 1.0
+        startBtn.layer.shadowColor = UIColor.blackColor().CGColor
     }
 }
