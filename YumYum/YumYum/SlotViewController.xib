@@ -30,7 +30,7 @@
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-Rg-gKI">
                     <rect key="frame" x="250" y="375" width="100" height="100"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="スタート">
+                    <state key="normal" title="START">
                         <color key="titleColor" red="0.36862745098039218" green="0.20784313725490197" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -83,7 +83,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="W2e-Fi-3pG"/>
                         <constraint firstAttribute="height" constant="100" id="teO-N8-3ed"/>
                     </constraints>
-                    <state key="normal" title="ストップ">
+                    <state key="normal" title="STOP">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
