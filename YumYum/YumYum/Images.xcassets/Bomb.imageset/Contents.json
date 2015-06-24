@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "gameOver.png"
+      "filename" : "bomb.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "gameOver@x2.png"
+      "filename" : "bomb@x2.png"
     },
     {
       "idiom" : "universal",
