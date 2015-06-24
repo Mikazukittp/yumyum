@@ -103,6 +103,7 @@ class BombViewController: UIViewController {
     
     private func setLimitNumber () -> UInt32 {
         var number:UInt32 = arc4random()%10 + 20
+        println(number)
         return number
     }
     
