@@ -6,6 +6,7 @@
     <customFonts key="customFonts">
         <mutableArray key="DSEG7Classic-Bold.ttf">
             <string>DSEG7Classic-Bold</string>
+            <string>DSEG7Classic-Bold</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -21,9 +22,38 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd3-04-UyH">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88.88 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-f5-UNx">
                     <rect key="frame" x="57" y="100" width="300" height="200"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="10K-bm-cm2"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="FkJ-qU-5sv"/>
+                        <constraint firstAttribute="height" constant="200" id="g0w-xF-8Zz"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mtC-2s-bMU"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="uq6-aK-TVT"/>
+                        <constraint firstAttribute="width" constant="300" id="vvq-l6-uBC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="80"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="FkJ-qU-5sv"/>
+                            <exclude reference="g0w-xF-8Zz"/>
+                            <exclude reference="mtC-2s-bMU"/>
+                            <exclude reference="uq6-aK-TVT"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd3-04-UyH">
+                    <rect key="frame" x="57" y="100" width="300" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="6WR-TB-Yha"/>
                         <constraint firstAttribute="height" constant="200" id="6vp-SO-D7V"/>
@@ -75,10 +105,12 @@
                 <constraint firstAttribute="bottom" secondItem="zju-RD-e7E" secondAttribute="bottom" constant="100" id="Dx2-Xg-NVw"/>
                 <constraint firstAttribute="centerX" secondItem="zju-RD-e7E" secondAttribute="centerX" id="Geh-mM-eJp"/>
                 <constraint firstAttribute="centerX" secondItem="zju-RD-e7E" secondAttribute="centerX" id="Iki-Ba-Nbt"/>
+                <constraint firstItem="Xcm-f5-UNx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="LuS-MR-nV5"/>
                 <constraint firstAttribute="centerX" secondItem="zju-RD-e7E" secondAttribute="centerX" id="QUD-ai-VZB"/>
                 <constraint firstAttribute="centerX" secondItem="zju-RD-e7E" secondAttribute="centerX" id="ZC9-Zw-A60"/>
                 <constraint firstAttribute="centerX" secondItem="Jd3-04-UyH" secondAttribute="centerX" id="kdL-gX-a2u"/>
                 <constraint firstAttribute="centerX" secondItem="Jd3-04-UyH" secondAttribute="centerX" id="uoE-dh-w6C"/>
+                <constraint firstAttribute="centerX" secondItem="Xcm-f5-UNx" secondAttribute="centerX" id="yCd-ov-ez4"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <variation key="default">
