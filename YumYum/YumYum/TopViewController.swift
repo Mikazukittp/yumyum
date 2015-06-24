@@ -44,6 +44,13 @@ class TopViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    @IBAction func infoTapped(sender: AnyObject) {
+        var pc = InfoViewController(nibName: "InfoViewController", bundle: nil)
+        
+        self.navigationController?.pushViewController(pc, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func setBannerView() {
         
         #if DEBUG
