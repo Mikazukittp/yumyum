@@ -174,7 +174,7 @@ class BombViewController: UIViewController {
     private func allowButton (button:UIButton,value:String) {
         button.setTitle(value, forState: UIControlState.Normal)
         button.enabled = true
-        button.backgroundColor = UIColor.whiteColor()
+        button.backgroundColor = UIColor.grayColor()
 
     }
 }
