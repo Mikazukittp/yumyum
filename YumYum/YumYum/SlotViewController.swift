@@ -59,7 +59,7 @@ class SlotViewController: UIViewController {
                 timerRunning = true
                 nowNum = 2
             case 2:
-                timer = NSTimer.scheduledTimerWithTimeInterval(0.08, target: self, selector: Selector("update3"), userInfo: nil, repeats: true)
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("update3"), userInfo: nil, repeats: true)
                 timerRunning = true
                 nowNum = 3
             default:
