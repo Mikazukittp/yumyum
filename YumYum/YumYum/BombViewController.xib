@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-7x-AV4" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="10" y="368" width="80" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-7x-AV4" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="10" y="367" width="80" height="50"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="DlS-7Z-dKL"/>
@@ -35,8 +35,8 @@
                         <action selector="button1Tapped:" destination="-1" eventType="touchUpInside" id="LZ6-k5-A5A"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uA-Ca-1Oq" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="260" y="368" width="80" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uA-Ca-1Oq" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="260" y="367" width="80" height="50"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Ocw-Bp-TTV"/>
@@ -51,8 +51,8 @@
                         <action selector="button2Tapped:" destination="-1" eventType="touchUpInside" id="nyH-mh-yH7"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-lT-A7B" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="510" y="368" width="80" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-lT-A7B" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="510" y="367" width="80" height="50"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="aLL-EZ-9iZ"/>
@@ -67,21 +67,21 @@
                         <action selector="button3Tapped:" destination="-1" eventType="touchUpInside" id="RbH-w7-Vdc"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7F-xZ-1pQ">
-                    <rect key="frame" x="0.0" y="265" width="600" height="103"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n7F-xZ-1pQ">
+                    <rect key="frame" x="0.0" y="265" width="600" height="102"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-qd-KBb">
                     <rect key="frame" x="0.0" y="498" width="600" height="102"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TF-Ie-iTV" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
-                    <rect key="frame" x="200" y="448" width="200" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TF-Ie-iTV" customClass="RoundButton" customModule="YumYum" customModuleProvider="target">
+                    <rect key="frame" x="200" y="447" width="200" height="51"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="LnA-Mg-kII"/>
                         <constraint firstAttribute="width" constant="200" id="Szz-Xa-jbj"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <state key="normal" title="retry">
+                    <state key="normal" title="RETRY">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
