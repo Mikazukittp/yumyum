@@ -80,8 +80,8 @@
                         <constraint firstAttribute="height" constant="50" id="LnA-Mg-kII"/>
                         <constraint firstAttribute="width" constant="200" id="Szz-Xa-jbj"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <state key="normal" title="もう一度やる">
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="retry">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
